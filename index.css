@@ -1,0 +1,447 @@
+:root{
+    --lightest-blue: #CDF5FD;
+    --light-blue: #A0E9FF;
+    --blue: #89CFF3;
+    --dark-blue: #00A9FF;
+    --primary-color: #1E3050;
+    --gray:#e4e2e2;
+    --light-gray: #f4f4f4;
+    --white: #ffff;
+    --dark-cyan: #008080;
+    --darkest-cyan: #015252;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    color: var(--primary-color);
+}
+
+/* header */
+
+header{
+    background-color: var(--blue);
+    display: flex;
+    gap: 64px;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+header .profile{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-shrink: 0;
+    
+}
+header .profile .username{
+    font-weight: 700;
+    font-size: 1.1em;
+}
+header .profile img {
+    height: 30px;
+    width: 30px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    flex:2;
+}
+
+header nav .nav-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    border-right: 2px solid;
+    padding: 8px;
+    flex: 1;
+    transition: background-color 0.5s ease, border-bottom 0.1s ease;
+}
+header nav .nav-item:hover{
+    border-bottom: 3px solid;
+}
+
+header nav .nav-item:last-child{
+    border-right: none;
+}
+
+/* main */
+
+main{
+    display: flex;
+    height: 100%;
+    
+}
+
+/* market */
+
+aside#market{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    background-color: var(--light-gray);
+    text-align: center;
+    align-items: center;
+    padding: 8px;
+}
+aside#market h3 {
+    padding: 0.25em 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.exchange-rates{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    justify-content: space-evenly;
+}
+
+.exchange-rates .currency{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+.exchange-rates .currency .currency-title{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.exchange-rates .currency .currency-title h4{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+
+/* basic-content */
+
+section#basic-content{
+    background-color:var(--gray);
+    flex: 10;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+/* Table */
+
+
+section#basic-content table th,td {
+    border: 1px solid var(--dark-cyan);
+    padding: 6px;
+    text-align: center;
+}
+
+section#basic-content table th {
+    background-color: var(--dark-cyan);
+    color: var(--white);
+}
+
+/* credit-cards */
+.credit-cards{
+    display: flex;
+    gap: 8px;
+}
+
+.credit-cards .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 12px;
+    gap: 16px;
+    flex: 1;
+    border-radius: 8px;
+}
+
+.credit-cards .card h3 {
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 2px solid;
+}
+
+.credit-cards .card p {
+    flex:1
+}
+
+.credit-cards .card a {
+    font-size: 0.8em;
+    flex: 2;
+    text-align: center;
+}
+
+.credit-cards .card a:hover {
+   color: var(--dark-cyan);
+}
+
+.credit-cards .card .card-bottom{
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit-cards .card .card-bottom button {
+    flex: 3;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border-radius: 4px;
+    padding: 4px 0px;
+    transition: background-color 0.3s ease;
+}
+
+.credit-cards .card .card-bottom button:hover {
+    background-color: var(--darkest-cyan);
+    color: var(--white);
+}
+
+/* transactions */
+aside#transactions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 3;
+    gap: 0.2em;
+    background-color: var(--light-gray);
+    padding: 0.5em;
+}
+
+aside#transactions h3 {
+    padding: 0.25em 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+aside#transactions nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+    width: 100%;
+}
+
+aside#transactions nav .nav-item{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    padding: 0.5em;
+    border: 1px solid var(--darkest-cyan);
+    border-radius: 4px;
+}
+
+aside#transactions nav .nav-item p {
+    max-width: 14ch;
+}
+
+aside#transactions nav .nav-item a{
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+    background-color: var(--dark-blue);
+    padding: 32px;
+}
+
+footer h3 {
+    border-bottom: 3px solid var(--primary-color);
+    font-size: 1.3em;
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+
+footer a:hover{
+    color: var(--white);
+    transition: 0.3s ease;
+}
+
+/* footer-top */
+
+footer .footer-top{
+    display: flex;
+    gap: 32px;
+    
+}
+.footer-top .announcements{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.footer-top .announcements .announcement{
+    display: flex;
+    gap: 12px;
+}
+
+.footer-top .announcements .announcement-image{
+    flex-shrink: 0;
+}
+
+.footer-top .contact-us{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    flex:1;
+
+}
+
+/* footer links */
+footer .footer-links{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+} 
+
+
+
+/* Media queries */
+
+@media screen and (max-width:992px) {
+    footer .footer-links{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        
+    } 
+    section#basic-content table{
+        font-size: 0.9em;
+    }
+    .credit-cards{
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width:767px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        padding: 0.5em;
+        font-size: 0.8em;
+        
+    }
+    section#basic-content table,footer{
+        font-size: 0.8em;
+    }
+    .credit-cards{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+    }
+    .credit-cards p{
+        text-align: center;
+    }
+    aside#transactions,.exchange-rates p{
+        font-size: 0.8em;
+    }
+    aside#transactions,aside#market h3{
+        font-size: 1.2em;
+    }
+    
+    aside#transactions nav .nav-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 0.25em;
+    }
+
+    .exchange-rates .currency .currency-title h4 {
+        font-size: 1em;
+    } 
+    
+    .footer-top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width:600px) {  
+    section#basic-content table{
+        font-size: 0.7em;
+            width: 70%;
+            margin: auto;
+        }
+    .credit-cards{
+        font-size: 0.7em;
+    }
+    section#basic-content{
+        gap: 32px;
+    }
+}
+
+
+
+@media screen and (max-width:500px) {  
+    header,aside#transactions,footer{
+        font-size: 0.7em;
+    }
+
+    aside#market h3{
+        margin-top: 8px;
+        font-size: 0.8em;
+    }
+    aside#market{
+        padding: 0px;
+    }
+
+    aside#transactions h3{
+        font-size: 0.9em;
+    }
+    aside#transactions nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .exchange-rates p{
+        font-size: 0.6em;
+    }
+    
+    .exchange-rates .currency .currency-title h4{
+        font-size: 0.8rem;
+    }
+
+    .exchange-rates{
+        margin-top: 24px;
+        justify-content: flex-start;
+        gap: 32px;
+    }   
+
+    section#basic-content table th, td {
+        padding: 2px; 
+    }
+    
+    section#basic-content table{
+        font-size: 0.5em; 
+            margin: auto;
+    } 
+    section#basic-content{
+        gap: 16px;
+    }
+}
